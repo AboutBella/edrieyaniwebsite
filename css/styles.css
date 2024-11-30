@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Edrieyani's Resume</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Blurred Background Image */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/bell.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Apply blur effect */
+            z-index: -1; /* Make sure the image stays in the background */
+        }
+
+        /* Main Content */
+        header {
+            background-color: rgba(255, 142, 142, 0.8); /* Semi-transparent background */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #marquee-container {
+            text-align: center;
+            flex: 1;
+        }
+
+        marquee {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #clock {
+            font-size: 20px;
+            color: #333;
+        }
+
+        nav {
+            background-color: #FFB3B3;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #FFECEC;
+            border: 1px solid #FF8E8E;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav table td {
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav table td a {
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav table td a:hover {
+            color: #FF4C4C;
+        }
+
+        .bg-text {
+            background-color: rgba(0,0,0, 0.4); /* Semi-transparent background for text */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0; /* Set z-index to 0 to ensure popup can be on top */
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #FFB3B3;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Callout Styles */
+        .callout {
+            position: fixed;
+            bottom: 35px;
+            right: 20px;
+            margin-left: 20px;
+            max-width: 300px;
+            z-index: 10; /* Make sure it shows above other content */
+        }
+
+        .callout-header {
+            padding: 25px 15px;
+            background: #FC6C85;
+            font-size: 30px;
+            color: white;
+        }
+
+        .callout-container {
+            padding: 15px;
+            background-color: #FFD1DC;
+            color: black;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .closebtn:hover {
+            color: lightgrey;
+        }
+
+        /* Popup Modal Styles */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 10; /* Ensure the popup is in front of other elements */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 500px;
+            margin: 10% auto;
+            text-align: center;
+        }
+
+        .popup button {
+            background-color: #FF4C4C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .popup button:hover {
+            background-color: #FF1A1A;
+        }
+	.footer {
+   	   position: sticky;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color: brown;
+           color: white;
+           text-align: center;
+}
+    </style>
+</head>
